@@ -64,7 +64,7 @@ class Solution2:
     '''
     正确题解
     '''
-    def findSubstring(self, s: str, words: List[str]) -> List[int]:
+    def findSubstring(self, s: str, words):
         from collections import Counter
         if not s or not words:return []
         one_word = len(words[0])
