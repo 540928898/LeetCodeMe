@@ -14,7 +14,6 @@ public class meituan2 {
         }
         System.out.println(longestSub(arr));
     }
-
     public static int longestSub(int[] arr){
         int max = Integer.MIN_VALUE;
         int[] brr = new int[arr.length-1];
@@ -23,13 +22,26 @@ public class meituan2 {
             for (int j = 0; j < arr.length ; j++) {
                 if(i == j) continue;
                 brr[index++]=arr[j];
-
             }
             max = Math.max(max,longest(brr));
         }
         return max;
     }
-
+    public  static int longest2(int[] arr){
+        int max1 = 0;
+        int len = 0;
+        int count = 1;
+        for(int i = 1;i<arr.length;i++){
+            if (arr[i] - arr[i-1] > 0){
+                count += 1;
+            }
+            else {
+                max1 = Math.max(max1,count);
+                count = 1;
+            }
+        }
+        return max1;
+    }
     public static int longest(int[] arr){
         int[] dp = new int[arr.length+1];
         Arrays.fill(dp,1);

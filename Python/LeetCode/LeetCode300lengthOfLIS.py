@@ -14,6 +14,7 @@ class Solution:
         return res
 
 
+
 if __name__ == '__main__':
     t1 = Solution()
     print (t1.lengthOfLIS([1,3,6,7,9,4,10,5,6]))
